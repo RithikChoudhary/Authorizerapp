@@ -43,6 +43,8 @@ def getData(fName=None, lName=None, email=None, password=None):
 def checkPassword(email, password):
     user = getData(email=email)
     
-    if len(user)>0: user=user[0]
-
-    return f"{user[0].lower()}_{user[1].lower()}"
+    if len(user)>0: 
+        user=user[0]
+        return f"{user[0].lower()}_{user[1].lower()}"
+    else:
+        return None
